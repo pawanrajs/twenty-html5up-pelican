@@ -7,49 +7,15 @@
         <h2><strong>Pawanraj Sadhwani</strong></h2>
 
         <p>
-            I <strong>consult</strong> businesses on technology strategy.<br> I also run half marathons and cheer Manchester United. <br> I sometimes write about <a>technology</a>, <a>life</a> or <a>nothing at all.</a><br> After <a>conversations with myself</a>,
-            I've decided I should write more.
+            I <strong><a href="#">consult</a></strong> businesses on technology strategy.<br /> I also run half marathons and cheer Manchester United. <br /> I sometimes write about
+            <a href="{{SITEURL}}/{{CATEGORY_URL | replace('{slug}', 'technology')}}">technology</a>,
+            <a href="{{SITEURL}}/{{CATEGORY_URL | replace('{slug}', 'personal')}}">my life</a> or
+            <a href="{{SITEURL}}/{{CATEGORY_URL | replace('{slug}', 'scribbles')}}">nothing at all.</a><br /> After
+            <a href="{{SITEURL}}/{{CATEGORY_URL | replace('{slug}', 'conversations-with-myself')}}">conversations with myself</a>, I've decided I should write more.<br /> So watch this space!
         </p>
     </header>
 
-    <!-- One -->
-    <section class="wrapper style2 container special-alt">
-        <div class="row half">
-            <div class="8u">
-
-                <header>
-                    <h2>Behold the <strong>icons</strong> that visualize what you’re all about. or just take up space. your call bro.</h2>
-                </header>
-                <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices.
-                    Aliquam eu elit eget arcu commodo.</p>
-                <footer>
-                    <ul class="buttons">
-                        <li><a href="#" class="button">Find Out More</a></li>
-                    </ul>
-                </footer>
-
-            </div>
-            <div class="4u skel-cell-important">
-
-                <ul class="feature-icons">
-                    <li><span class="icon fa-clock-o"><span class="label">Feature 1</span></span>
-                    </li>
-                    <li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span>
-                    </li>
-                    <li><span class="icon fa-laptop"><span class="label">Feature 3</span></span>
-                    </li>
-                    <li><span class="icon fa-inbox"><span class="label">Feature 4</span></span>
-                    </li>
-                    <li><span class="icon fa-lock"><span class="label">Feature 5</span></span>
-                    </li>
-                    <li><span class="icon fa-cog"><span class="label">Feature 6</span></span>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </section>
-
+    {% include 'includes/featuredpost.html' %}
     <!-- Two -->
     <section class="wrapper style1 container special">
         <div class="row">
@@ -89,4 +55,4 @@
 
 </article>
 
-{# %include 'coolstuff.html' % #} {% include 'includes/cta.html' %} {% endblock content %}
+{# %include 'includes/coolstuff.html' % #} {% include 'includes/cta.html' %} {% endblock content %}

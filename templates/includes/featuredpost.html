@@ -2,12 +2,12 @@
 {% set all_posts = articles if not all_articles else all_articles %} {% set random_post = all_posts | random %}
 <section class="wrapper style2 container special-alt">
     <div class="row half">
-        <div class="8u">
+        <div class="9u">
 
             <header>
                 <h2>Featured - <strong>{{random_post.title}}</strong></h2>
             </header>
-            <p>{{ random_post.content[:200] | striptags }}</p>
+            <p>{{ random_post.content[:150] | striptags | escape }}</p>
             <footer>
                 <ul class="buttons">
                     <li><a href="{{ SITEURL }}/{{ random_post.url }}" class="button">Read More</a></li>
@@ -15,13 +15,11 @@
             </footer>
 
         </div>
-        <div class="4u skel-cell-important">
-
+        <div class="3u skel-cell-important">
             <ul class="feature-icons">
-                <li><span class="icon fa-{{random_post.icon}}"><span class="label">Feature 1</span></span>
+                <li><span class="icon fa-{{random_post.icon}}"><span class="label">{{random_post.title}}</span></span>
                 </li>
             </ul>
-
         </div>
     </div>
 </section>

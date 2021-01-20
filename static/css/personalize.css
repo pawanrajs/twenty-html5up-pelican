@@ -1,0 +1,5 @@
+@charset "UTF-8";
+ul.feature-icons li {
+    width: 100%;
+    float: right;
+}

@@ -1,17 +1,13 @@
-{% extends "base.html" %}
-
-{% block title %}Archives | {{ super() }}{% endblock title %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %}Archives | {{ super() }}{% endblock title %} {% block content %}
 <!-- Main -->
 <article id="main">
 
-  <header class="special container">
-    <span class="icon fa-pencil"></span>
-    <h2>Archives</h2>
-    <!-- add page sub title here -->
-    <p>Archives Template</p>
-  </header>
+    <header class="special container">
+        <span class="icon fa-pencil"></span>
+        <h2>Archives</h2>
+        <!-- add page sub title here -->
+        <p>Archives Template</p>
+    </header>
 
     <!-- One -->
     <section class="wrapper style4 container">
@@ -20,15 +16,17 @@
 
             <div class="8u">
                 <div class="content">
-                {% for article in dates %}
+                    {% for article in dates %}
                     <section>
                         <!-- <a href="#" class="image feature"><img src="images/pic03.jpg" alt="" /></a> -->
                         <header>
-                            <a href="{{ SITEURL }}/{{ article.url }}"><h3>{{ article.title }}</h3></a>
+                            <a href="{{ SITEURL }}/{{ article.url }}">
+                                <h3>{{ article.title }}</h3>
+                            </a>
                         </header>
                         <p>{{ article.summary|striptags }}</p>
                     </section>
-                {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
 
@@ -69,6 +67,4 @@
     </section>
 </article>
 
-{% include 'cta.html' %}
-
-{% endblock content %}
+{% include 'includes/cta.html' %} {% endblock content %}

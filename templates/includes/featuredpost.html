@@ -7,7 +7,7 @@
             <header>
                 <h2>Featured - <strong>{{random_post.title}}</strong></h2>
             </header>
-            <p>{{ random_post.content[:150] | striptags | escape }}</p>
+            <p>{{ random_post.content[:200] | striptags | escape }}</p>
             <footer>
                 <ul class="buttons">
                     <li><a href="{{ SITEURL }}/{{ random_post.url }}" class="button">Read More</a></li>

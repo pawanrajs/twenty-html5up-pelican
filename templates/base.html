@@ -49,7 +49,7 @@
                     <ul>
                         {% for cat, null in categories %} {% if cat != 'blog' %}
                         <li {% if cat==category %}class="active" {% endif %}>
-                            <a href="{{ SITEURL }}/category/{{ cat | lower | replace(' ', '-')}}/">{{ cat }}</a>
+                            <a href="{{ SITEURL }}/category/{{ cat | lower | replace(' ', '-')}}">{{ cat }}</a>
                         </li>
                         {% endif %} {% endfor %}
                     </ul>

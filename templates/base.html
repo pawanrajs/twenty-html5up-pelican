@@ -57,7 +57,7 @@
                 {% if DISPLAY_PAGES_ON_MENU %} {% for page in pages %}
                 <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
                 {% endfor %} {% endif %}
-                <li><a href="#" class="button special">Resume</a></li>
+                <li><a href="{{SITEURL}}/{{RESUME_PATH}}" class="button special">Resume</a></li>
             </ul>
         </nav>
     </header>

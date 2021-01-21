@@ -1,6 +1,6 @@
 <ul class="tagcloud">
     {% for tag in tag_cloud %}
-    <li class="tag-{{ tag.1 }}">
+    <li class="tag-{{ tag.1 }} list-group-item">
         <a href="{{ SITEURL }}/{{ tag.0.url }}">
             {{ tag.0 }}
                 {% if TAG_CLOUD_BADGE %}

@@ -7,18 +7,18 @@
         <h2><strong>Pawanraj Sadhwani</strong></h2>
 
         <p>
-            I <strong><a href="#">consult</a></strong> businesses on technology strategy.<br /> I also run half marathons and cheer Manchester United. <br /> I sometimes write about
+            I <strong><a href="{{SITEURL}}/{{RESUME_PATH}}">consult</a></strong> businesses on technology strategy.<br /> I also run half marathons and cheer Manchester United. <br /> I sometimes write about
             <a href="{{SITEURL}}/{{CATEGORY_URL | replace('{slug}', 'technology')}}">technology</a>,
             <a href="{{SITEURL}}/{{CATEGORY_URL | replace('{slug}', 'personal')}}">my life</a> or
-            <a href="{{SITEURL}}/{{CATEGORY_URL | replace('{slug}', 'scribbles')}}">nothing at all.</a><br /> After
-            <a href="{{SITEURL}}/{{CATEGORY_URL | replace('{slug}', 'conversations-with-myself')}}">conversations with myself</a>, I've decided I should write more.<br /> So watch this space!
+            <a href="{{SITEURL}}/{{CATEGORY_URL | replace('{slug}', 'scribbles')}}">nothing at all.</a><br />
+            <a href="{{SITEURL}}/{{CATEGORY_URL | replace('{slug}', 'conversations-with-myself')}}">My subconscious talked me </a>into creating this site and writing more.<br />
         </p>
     </header>
 
     {% include 'includes/featuredpost.html' %}
     <!-- Two -->
     <section class="wrapper style1 container special">
-        <div class="row">
+        <div class="row" id="latest_posts">
 
             <div class="12u">
                 <h2>Latest Posts</h2>

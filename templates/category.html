@@ -15,7 +15,7 @@
 
             <div class="8u">
                 <div class="content">
-                    {% for article in articles %}
+                    {% for article in articles_page.object_list %}
                     <section>
                         <!-- <a href="#" class="image feature"><img src="images/pic03.jpg" alt="" /></a> -->
                         <header>
@@ -55,6 +55,7 @@
             </div>
 
         </div>
+        {% include 'includes/pagination.html' %}
     </section>
 
     <!-- Two -->

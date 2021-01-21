@@ -16,7 +16,7 @@
 
             <div class="8u">
                 <div class="content">
-                    {% for article in dates %}
+                    {% for article in dates_page.object_list %}
                     <section>
                         <!-- <a href="#" class="image feature"><img src="images/pic03.jpg" alt="" /></a> -->
                         <header>
@@ -26,7 +26,8 @@
                         </header>
                         <p>{{ article.summary|striptags }}</p>
                     </section>
-                    {% endfor %}
+                    {% endfor %} {% include 'includes/pagination.html' %}
+
                 </div>
             </div>
 

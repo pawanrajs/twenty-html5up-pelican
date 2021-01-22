@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Tags | {{ super() }}{% endblock title %} {% block content %}
+
+<!-- Main -->
+<article id="main">
+
+    <header class="special container">
+        <span class="icon fa-tags"></span>
+        <h2>All Tags</h2>
+        <!-- add page sub title here -->
+    </header>
+
+    <!-- One -->
+    <section class="wrapper style4 container">
+
+        <!-- Content -->
+        <div class="content">
+            <section>
+                {% include 'includes/tagcloud.html' %}
+            </section>
+        </div>
+
+    </section>
+
+    <!-- Two -->
+    {% include 'most_recent.html' %}
+
+</article>
+{% include 'includes/cta.html' %} {% endblock content %}

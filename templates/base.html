@@ -36,6 +36,7 @@
     <!-- Header -->
     <header id="header" {% if page_name=='index' %}class="alt" {% endif %}>
         <h1 class="logo">
+            {% if SITELOGO %}<img class="img-responsive pull-left gap-right" src="{{ SITEURL }}/{{ SITELOGO }}" width="{{ SITELOGO_SIZE }}"/> {% endif %}
             <a href="{{ SITEURL }}/">{{ SITENAME }}</a>
         </h1>
         <nav id="nav">

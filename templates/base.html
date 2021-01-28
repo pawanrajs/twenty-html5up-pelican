@@ -54,9 +54,16 @@
                         {% endif %} {% endfor %}
                     </ul>
                 </li>
-                {% if DISPLAY_PAGES_ON_MENU %} {% for page in pages %}
-                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-                {% endfor %} {% endif %}
+                {% if DISPLAY_PAGES_ON_MENU %} 
+                    {% for p in pages %}
+                        {% if p.url %}
+                            <li {% if p == page %} class="active" {% endif %}>
+                                <a href="{{ SITEURL }}/{{ p.url }}">{{ p.menulabel | default(p.title) }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %} 
+                {% endif %}
+
                 <li><a href="{{SITEURL}}/{{RESUME_PATH}}" class="button special">Resume</a></li>
             </ul>
         </nav>

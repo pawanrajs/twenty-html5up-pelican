@@ -10,12 +10,12 @@
     <div class="inner">
 
         <header>
-            <h2>Pawanraj Sadhwani</h2>
+            <h2>{{SITENAME}}</h2>
         </header>
 
-        <p>
-            <a href="{{SITEURL}}/{{RESUME_PATH}}">Tech consultant</a>. <a href="#latest_posts">Scribbles ocassionally</a>.
-        </p>
+        {% if BANNER_SUBTITLE %}
+            <p>{{BANNER_SUBTITLE}}</p>
+        {% endif %}
 
         <!--
         <footer>

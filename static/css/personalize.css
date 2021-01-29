@@ -29,6 +29,10 @@ li.tag-4 {
     font-size: 80%;
 }
 
+/* fix alignment of logo vs text */
+#header .logo img {
+    vertical-align: middle;
+}
 
 /*
 ul.tagcloud li.list-group-item span.badge {

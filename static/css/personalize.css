@@ -34,6 +34,23 @@ li.tag-4 {
     vertical-align: middle;
 }
 
+/* Search box */
+input.search-query {
+    float: left;
+    width: 80%;
+    background-color: #f3f3f3;
+    border: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+}
+
+button.search-button {
+    min-width: 10%;
+    margin-left: 4%;
+    width:16%;
+    text-align: center;
+    align-content: center;
+}
 /*
 ul.tagcloud li.list-group-item span.badge {
     background-color: #3fb1a3;

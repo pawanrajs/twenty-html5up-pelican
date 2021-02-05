@@ -35,6 +35,26 @@
 
                 <!-- Sidebar -->
                 <div class="sidebar">
+
+                    <!-- To add search section or not -->
+                    {% if 'tipue_search' in PLUGINS %}
+                        <section>
+                            <header>
+                                <h3>Search</h3>
+                            </header>
+                            <span>
+                                <form action="{{ SEARCH_URL | default('/search.html') }}">
+                                    <div class="tipue_search_group">
+                                        <input type="text" class="search-query" id="tipue_search_input" placeholder="Search" name="q" required onsubmit="return validateForm(this.elements['q'].value);">
+                                        <button type="submit" class="button special search-button tipue_search_button">
+                                            <div class="tipue_search_icon">&#9906;</div>
+                                        </button>
+                                    </div>
+                                </form>
+                            </span>
+                        </section>
+                    {% endif %}
+
                     <section>
                         <header>
                             <h3>All Tags</h3>

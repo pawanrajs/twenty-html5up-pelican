@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %} Search | {{ super() }} {% endblock %}
+
+{% block scripts %}
+    <script src="{{ SITEURL }}/tipuesearch_content.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.min.js"></script>
+    
+    <script>
+
+    $(document).ready(function() {
+      $('#tipue_search_input').tipuesearch({
+        'show': 10,
+        'newWindow': false,
+        'contentLocation': '{{ SITEURL }}/tipuesearch_content.json'
+      });
+    });
+    </script>
+{% endblock %}
+
+{% block content %}
+
+<article id="main">
+
+  <header class="special container">
+      <span class="icon fa-search"></span>
+      <h2>Search</h2>
+  </header>
+
+  <!-- One -->
+  <section class="wrapper style4 container">
+
+      <!-- Content -->
+      <div class="content">
+          <section>
+            <form action="{{ SEARCH_URL | default('/search.html') }}">
+              <div class="tipue_search_group">
+                  <input type="text" class="search-query" id="tipue_search_input" placeholder="Search" name="q" required onsubmit="return validateForm(this.elements['q'].value);">
+                  <button type="submit" class="button special search-button tipue_search_button">
+                      <div class="tipue_search_icon">&#9906;</div>
+                  </button>
+              </div>
+          </form>
+
+            <div id="tipue_search_content"></div>
+          </section>
+      </div>
+
+  </section>
+
+  <!-- Two -->
+  {% include 'most_recent.html' %}
+
+</article>
+{% endblock %}

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -5,7 +6,12 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="/js/jquery.min.js"></script>
+
+    {% if 'tipue_search' in PLUGINS %}
+        <link href="{{ SITEURL}}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.css" rel="stylesheet"> 
+    {% endif %}
+
+    <script src="/js/jquery-3.5.1.min.js"></script>
     <script src="/js/jquery.dropotron.min.js"></script>
     <script src="/js/skel.min.js"></script>
     <script src="/js/skel-layers.min.js"></script>
@@ -18,7 +24,7 @@
     </noscript>
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/css/personalize.css" rel="stylesheet" type="text/css" />
+    <link href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/personalize.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
     <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
@@ -71,6 +77,9 @@
     </header>
 
     {% block content %}{% endblock %} {% include 'includes/footer.html' %}
+    
+    <!-- add scripts for search here in search.html -->
+    {% block scripts %}{% endblock %}
 
 </body>
 

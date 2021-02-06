@@ -34,7 +34,7 @@ li.tag-4 {
     vertical-align: middle;
 }
 
-/* Search box */
+/* Tipue Search Related Formatting to gel with the theme */
 input.search-query {
     float: left;
     width: 80%;
@@ -51,6 +51,15 @@ button.search-button {
     text-align: center;
     align-content: center;
 }
+
+.tipue_search_content_title h3 {
+    margin-bottom: 0;
+}
+
+.tipue_search_content_url, .tipue_search_content_debug {
+    font-size: 80%
+}
+
 /*
 ul.tagcloud li.list-group-item span.badge {
     background-color: #3fb1a3;

@@ -61,12 +61,24 @@ button.search-button {
     font-size: 80%
 }
 
-/* images within text */
+/* Blog body specific formatting */
+
 .style4 .content p img {
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
+
+/* Blog body specific formatting */
+.style4 .content ul {
+    list-style: initial;
+}
+
+.style4 .content ul li {
+    margin-left: 1.75em;
+}
+
+
 /*
 ul.tagcloud li.list-group-item span.badge {
     background-color: #3fb1a3;

@@ -3,7 +3,7 @@
 <article id="main">
 
     <header class="special container">
-        <span class="icon fa-{{page.icon}}"></span>
+        <span class="icon solid fa-{{page.icon}}"></span>
         <h2>{{ page.title }}</h2>
         {% include 'includes/sociallinks.html' %}
     </header>
@@ -15,7 +15,7 @@
         <div class="content">
             <section>
                 {% if page.image %}
-                <div class="image feature">
+                <div class="image featured">
                     <img src="{{page.image}}" alt="" />
                 </div>
                 {% endif %}

@@ -1761,7 +1761,7 @@ input, select, textarea {
 			padding-top: 1.5em;
 		}
 
-		header.special .icon {
+		header.special .icon:not(.circle) {
 			cursor: default;
 			height: 7em;
 			left: 0;
@@ -1771,7 +1771,7 @@ input, select, textarea {
 			width: 100%;
 		}
 
-			header.special .icon:before {
+			header.special .icon:not(.circle):before {
 				font-size: 3.5em;
 				opacity: 0.35;
 			}

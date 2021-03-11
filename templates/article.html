@@ -3,7 +3,7 @@
 <article id="main">
 
     <header class="special container">
-        <span class="icon fa-{{ article.icon }}"></span>
+        <span class="icon solid fa-{{ article.icon }}"></span>
         <h2>{{ article.title }}</h2>
         <!-- add page sub title here -->
         <p>
@@ -24,7 +24,7 @@
         <!-- Content -->
         <div class="content">
             <section>
-                <!-- <a href="#" class="image feature"><img src="images/pic04.jpg" alt="" /></a> -->
+                <!-- <a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a> -->
                 <p>{{ article.content }}</p>
             </section>
         </div>
@@ -32,7 +32,7 @@
     </section>
 
     <!-- Two -->
-    {% include 'most_recent.html' %}
+    {% include 'includes/most_recent.html' %}
 
 </article>
 

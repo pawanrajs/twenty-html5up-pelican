@@ -24,7 +24,7 @@
 <article id="main">
 
   <header class="special container">
-      <span class="icon fa-search"></span>
+      <span class="icon solid fa-search"></span>
       <h2>Search</h2>
   </header>
 
@@ -36,10 +36,17 @@
           <section>
             <form action="{{ SEARCH_URL | default('/search.html') }}">
               <div class="tipue_search_group">
-                  <input type="text" class="search-query" id="tipue_search_input" placeholder="Search" name="q" required onsubmit="return validateForm(this.elements['q'].value);">
-                  <button type="submit" class="button special search-button tipue_search_button">
+
+                <div class="row gtr-0 aln-middle aln-left">
+                  <div class="col-9 col-8-mobile">
+                      <input type="text" class="search-query" id="tipue_search_input" placeholder="Search" name="q" required onsubmit="return validateForm(this.elements['q'].value);">
+                    </div>
+                  <div class="col-3 col-4-mobile">
+                    <button type="submit" class="button fit primary search-button">
                       <div class="tipue_search_icon">&#9906;</div>
-                  </button>
+                    </button>
+                  </div>
+                </div>
               </div>
           </form>
 
@@ -50,7 +57,7 @@
   </section>
 
   <!-- Two -->
-  {% include 'most_recent.html' %}
+  {% include 'includes/most_recent.html' %}
 
 </article>
 {% endblock %}

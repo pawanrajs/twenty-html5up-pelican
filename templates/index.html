@@ -1,9 +1,12 @@
-{% extends "base.html" %} {% include 'includes/banner.html' %} {% block content %}
+{% extends "base.html" %} 
+{% include 'includes/banner.html' %} 
+
+{% block content %}
 <!-- Main -->
 <article id="main">
 
     <header class="special container">
-        <span class="icon fa-handshake-o"></span>
+        <span class="icon solid fa-handshake"></span>
         <h2><strong>Hi! I am Pawanraj Sadhwani</strong></h2>
 
         <p>
@@ -16,19 +19,20 @@
     </header>
 
     {## % include 'includes/featuredpost.html' % ##}
+
     <!-- Two -->
     <section class="wrapper style1 container special">
         <div class="row" id="latest_posts">
 
-            <div class="12u">
+            <div class="col-12">
                 <h2>Latest Posts</h2>
             </div>
 
             {% for article in articles_page.object_list %}
-            <div class="4u">
+            <div class="col-4 col-12-narrower">
 
                 <section>
-                    <span class="icon feature fa-{{ article.icon }}"></span>
+                    <span class="icon solid featured fa-{{ article.icon }}"></span>
                     <header>
                         <a href="{{ SITEURL }}/{{ article.url }}" rel='bookmark'>
                             <h3>{{ article.title }}</h3>
@@ -41,10 +45,8 @@
                         </ul>
                     </footer>
                 </section>
-
             </div>
             {% endfor %}
-
         </div>
         <!-- /.row -->
 
@@ -55,4 +57,8 @@
 
 </article>
 
-{# %include 'includes/coolstuff.html' % #} {% include 'includes/cta.html' %} {% endblock content %}
+{# %include 'includes/coolstuff.html' % #} 
+
+{% include 'includes/cta.html' %} 
+
+{% endblock content %}

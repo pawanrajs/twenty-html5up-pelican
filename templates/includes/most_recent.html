@@ -2,10 +2,10 @@
     <h3>Recent Posts</h3>
     <div class="row">
         {% for article in articles[:3] %}
-        <div class="4u">
+        <div class="col-4 col-12-narrower">
 
             <section>
-                <span class="icon feature fa-{{ article.icon }}"></span>
+                <span class="icon solid featured fa-{{ article.icon }}"></span>
                 <header>
                     <a href="{{ SITEURL }}/{{ article.url }}" rel='bookmark'>
                         <h3>{{ article.title }}</h3>

@@ -1,8 +1,8 @@
 <!-- Random Post to be added in featuredpost.html -->
 {% set all_posts = articles if not all_articles else all_articles %} {% set random_post = all_posts | random %}
 <section class="wrapper style2 container special-alt">
-    <div class="row half">
-        <div class="9u">
+    <div class="row gtr-50">
+        <div class="col-8 col-12-narrower">
 
             <header>
                 <h2>Featured - <strong>{{random_post.title}}</strong></h2>
@@ -15,9 +15,12 @@
             </footer>
 
         </div>
-        <div class="3u skel-cell-important">
-            <ul class="feature-icons">
-                <li><span class="icon fa-{{random_post.icon}}"><span class="label">{{random_post.title}}</span></span>
+        <div class="col-4 col-12-narrower imp-narrower">
+            <ul class="featured-icons">
+                <li>
+                    <span class="icon fa-{{random_post.icon}}">
+                        <span class="label">{{random_post.title}}</span>
+                    </span>
                 </li>
             </ul>
         </div>

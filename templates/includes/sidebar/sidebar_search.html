@@ -1,0 +1,21 @@
+<section>
+    <header>
+        <h3>Search</h3>
+    </header>
+    <span>
+        <form action="{{ SEARCH_URL | default('/search.html') }}">
+            <div class="tipue_search_group">
+                <div class="row gtr-0 aln-middle aln-left">
+                    <div class="col-9 col-8-mobile">
+                        <input type="text" class="search-query" id="tipue_search_input" placeholder="Search" name="q" required onsubmit="return validateForm(this.elements['q'].value);">
+                    </div>
+                    <div class="col-3 col-4-mobile">
+                        <button type="submit" class="button fit primary search-button">
+                            <div class="tipue_search_icon">&#9906;</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </span>
+</section>

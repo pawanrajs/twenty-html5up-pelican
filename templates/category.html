@@ -3,7 +3,7 @@
 <article id="main">
 
     <header class="special container">
-        <span class="icon fa-hashtag"></span>
+        <span class="icon solid fa-hashtag"></span>
         <h2><i class="fa fa-hashtag" aria-hidden="true"></i>{{ category }}</h2>
         <!-- add page sub title here -->
     </header>
@@ -11,13 +11,13 @@
     <!-- One -->
     <section class="wrapper style4 container">
 
-        <div class="row oneandhalf">
+        <div class="row gtr-150">
 
-            <div class="8u">
+            <div class="col-8 col-12-narrower">
                 <div class="content">
                     {% for article in articles_page.object_list %}
                     <section>
-                        <!-- <a href="#" class="image feature"><img src="images/pic03.jpg" alt="" /></a> -->
+                        <!-- <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a> -->
                         <header>
                             <a href="{{ SITEURL }}/{{ article.url }}">
                                 <h3>{{ article.title }}</h3>
@@ -30,27 +30,13 @@
             </div>
 
 
-            <div class="4u">
+            <div class="col-4 col-12-narrower">
 
                 <!-- Sidebar -->
                 <div class="sidebar">
-                    <section>
-                        <header>
-                            <h3>Tags</h3>
-                        </header>
-                        {% include 'includes/tagcloud.html' %}
-                    </section>
+                    {% include 'includes/sidebar/sidebar_tags.html' %}
 
-                    <section>
-                        <header>
-                            <h3>All Categories</h3>
-                        </header>
-                        <ul>
-                            {% for cat, _ in categories %}
-                            <li><a href="{{SITEURL}}/{{cat.url}}">{{cat.name}}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </section>
+                    {% include 'includes/sidebar/sidebar_categories.html' %}
                 </div>
             </div>
 
@@ -59,7 +45,7 @@
     </section>
 
     <!-- Two -->
-    {% include 'most_recent.html' %}
+    {% include 'includes/most_recent.html' %}
 
 </article>
 {% include 'includes/cta.html' %} {% endblock content %}

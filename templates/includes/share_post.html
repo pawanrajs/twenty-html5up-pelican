@@ -1,0 +1,27 @@
+{% if article.share_post and article.status != 'draft' %}
+    <section>
+        <p id="post-share-links">
+            {{SHARE_POST_INTRO | default('Share on: ')}}
+            <a href="{{article.share_post['twitter']}}" class="icon brands circle fa fa-twitter" target="_blank" title="Share on Twitter">
+                <span class="label">Share on Twitter</span>
+            </a>
+            <a href="{{article.share_post['facebook']}}" class="icon brands circle fa fa-facebook" target="_blank" title="Share on Facebook">
+                <span class="label">Share on Facebook</span>
+            </a>
+            <a href="{{article.share_post['linkedin']}}" class="icon brands circle fa fa-linkedin" target="_blank" title="Share on LinkedIn">
+                <span class="label">Share on LinkedIn</span>
+            </a>
+            <a href="{{article.share_post['hacker-news']}}" class="icon brands circle fa fa-hacker-news" target="_blank" title="Share on HackerNews">
+                <span class="label">Share on HackerNews</span>
+            </a>
+            <a href="{{article.share_post['email']}}" class="icon circle fa fa-envelope" target="_blank" title="Share via Email">
+                <span class="label">Share via Email</span>
+            </a>
+            <a href="{{article.share_post['reddit']}}" class="icon brands circle fa fa-reddit" target="_blank" title="Share via Reddit">
+                <span class="label">Share on Reddit</span>
+            </a>
+        </p>
+    </section>
+{% endif %}
+
+<a class="icon {% if title not in ('envelope', ) %}brands {% endif %}circle fa fa-{{ title }}"><span class="label">{{ title }}</span></a>

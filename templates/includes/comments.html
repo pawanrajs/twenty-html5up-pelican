@@ -11,7 +11,7 @@
     <div id="comment-post">
         <form method="POST" action="https://pawanrajs-com-staticman.herokuapp.com/v3/entry/github/pawanrajs/pawanrajs.com/twenty-theme/comments">
             <input name="options[redirect]" type="hidden" value="{{SITEURL}}/{{ article.url }}">
-            <input name="fields[url]" type="hidden" value="{{ article.url }}">
+            <input name="fields[url]" type="hidden" value="{{SITEURL}}/{{ article.url }}">
             <div><label>Name: <input name="fields[name]" type="text"></label></div>
             <div><label>E-mail: <input name="fields[email]" type="email"></label></div>
             <div><label>Message: <textarea name="fields[message]"></textarea></label></div>

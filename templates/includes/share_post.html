@@ -1,6 +1,6 @@
 {% if article.share_post and article.status != 'draft' %}
     <section>
-        <p id="post-share-links">
+        <div id="post-share-links">
             {{SHARE_POST_INTRO | default('Share on: ')}}
             <a href="{{article.share_post['twitter']}}" class="icon brands circle fa fa-twitter" target="_blank" title="Share on Twitter">
                 <span class="label">Share on Twitter</span>
@@ -20,8 +20,6 @@
             <a href="{{article.share_post['reddit']}}" class="icon brands circle fa fa-reddit" target="_blank" title="Share via Reddit">
                 <span class="label">Share on Reddit</span>
             </a>
-        </p>
+        </div>
     </section>
 {% endif %}
-
-<a class="icon {% if title not in ('envelope', ) %}brands {% endif %}circle fa fa-{{ title }}"><span class="label">{{ title }}</span></a>

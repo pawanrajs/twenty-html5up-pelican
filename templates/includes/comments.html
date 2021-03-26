@@ -1,22 +1,55 @@
-<section>
-    <div>
-        <h3 id="comments">COMMENTS</h3>
-        {% for comment in COMMENTS %}
-            {% if comment.url == article.url %}
-                <p class="comment">{{ comment.name }}: {{ comment.message }}</p>
-            {% endif %}
-        {% endfor %}
-    </div>
-
-    <div id="comment-post">
-        <form method="POST" action="https://pawanrajs-com-staticman.herokuapp.com/v3/entry/github/pawanrajs/pawanrajs.com/twenty-theme/comments">
+<section class="wrapper style4 container special comment-wrapper">
+    <h3 id="comments">Leave a Comment!</h3>
+    <p class="small">(Comments are moderated and will appear here when approved)</p>
+    <form method="POST" action="https://pawanrajs-com-staticman.herokuapp.com/v3/entry/github/pawanrajs/pawanrajs.com/twenty-theme/comments">
+        <div id="comment-form" class="row gtr-50">
             <input name="options[redirect]" type="hidden" value="{{SITEURL}}/{{ article.url }}">
-            <input name="fields[url]" type="hidden" value="{{SITEURL}}/{{ article.url }}">
-            <div><label>Name: <input name="fields[name]" type="text"></label></div>
-            <div><label>E-mail: <input name="fields[email]" type="email"></label></div>
-            <div><label>Message: <textarea name="fields[message]"></textarea></label></div>
-            
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-</section>
+            <input name="fields[url]" type="hidden" value="{{ article.url }}">
+            <div class="col-6 col-12-mobile">
+                <input type="text" name="fields[name]" placeholder="Name" />
+            </div>
+            <div class="col-6 col-12-mobile">
+                <input type="text" name="fields[email]" placeholder="E-mail" />
+            </div>
+            <div class="col-12">
+                <textarea name="fields[message]" placeholder="Type your comment. Comments are moderated and will appear when approved." rows="4"></textarea>
+            </div>
+            <div class="col-12">
+                <ul class="buttons">
+                    <li><input type="submit" class="primary" value="Post comment!" /></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+  </section>
+
+  <hr>
+
+  <section class="wrapper style1 container">
+      {% for comment in COMMENTS %}
+        {% if comment.url == article.url %}
+          <div class="comment-container">
+              <div class="comment-header">
+                  <div class="comment-author--no-cover">
+                      <h3>{{ comment.name | title }}</h3>
+                  </div>
+              </div>
+
+              <div class="comment-body">
+                  <div class="comment-text">
+                      <p>{{ comment.message }}</p>
+                    </div>
+              </div>
+
+              <div class="comment-footer">
+                  <ul>
+                      <li class="published-date">
+                        {% set days_ago = comment.date | datediff %}
+                        {% if days_ago == 0 %} Today {% elif days_ago == 1 %} {{ days_ago }} day {% else %} {{days_ago}} days {% endif %} ago 
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          {% endif %}
+      {% endfor %}
+  </section>

@@ -45,7 +45,7 @@
                   <ul>
                       <li class="published-date">
                         {% set days_ago = comment.date | datediff %}
-                        {% if days_ago == 0 %} Today {% elif days_ago == 1 %} {{ days_ago }} day {% else %} {{days_ago}} days {% endif %} ago 
+                        {% if days_ago == 0 %} Today {% elif days_ago == 1 %} {{ days_ago }} day ago {% else %} {{days_ago}} days ago {% endif %}
                       </li>
                   </ul>
               </div>

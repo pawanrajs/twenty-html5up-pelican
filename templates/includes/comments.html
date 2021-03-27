@@ -4,6 +4,7 @@
     <form method="POST" action="https://pawanrajs-com-staticman.herokuapp.com/v3/entry/github/pawanrajs/pawanrajs.com/twenty-theme/comments">
         <div id="comment-form" class="row gtr-50">
             <input name="options[redirect]" type="hidden" value="{{SITEURL}}/{{ article.url }}">
+            <input name="options[slug]" type="hidden" value="{{ article.slug }}">
             <input name="fields[url]" type="hidden" value="{{ article.url }}">
             <div class="col-6 col-12-mobile">
                 <input type="text" name="fields[name]" placeholder="Name" />

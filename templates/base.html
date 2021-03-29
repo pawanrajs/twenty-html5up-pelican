@@ -19,7 +19,7 @@
     <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
     {% if CUSTOM_CSS %}
-        <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet" type="text/css">
+        <link href="{{ SITEURL }}/{{THEME_STATIC_DIR}}/{{ CUSTOM_CSS }}" rel="stylesheet" type="text/css">
     {% endif %} 
 
     {% if 'tipue_search' in PLUGINS %}

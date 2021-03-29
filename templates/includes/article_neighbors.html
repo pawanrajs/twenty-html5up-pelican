@@ -1,0 +1,18 @@
+<div class="pagination">
+    <div class="row aln-center aln-middle">
+        <div class="col-6 col-12-mobile">
+            {% if article.prev_article %}
+                <a href="{{ SITEURL }}/{{ article.prev_article.url}}">
+                        &larr; {{ article.prev_article.title }}
+                </a> 
+            {% endif %} 
+        </div>
+        <div class="col-6 col-12-mobile" style="text-align: right;">
+            {% if article.next_article %}
+                <a href="{{ SITEURL }}/{{ article.next_article.url}}">
+                    {{ article.next_article.title }} &rarr;
+                </a> 
+            {% endif %}
+        </div>
+    </div>
+</div>

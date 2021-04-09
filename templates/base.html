@@ -10,6 +10,10 @@
 
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+
+    {% if FAVICON %} <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon"> {% endif %} 
+    {% if TOUCHICON %} <link rel="apple-touch-icon" href="{{ SITEURL }}/{{ TOUCHICON }}"> {% endif %}
+
     {% block meta %} {% endblock meta %}
 
     <!-- CSS -->

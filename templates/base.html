@@ -79,7 +79,7 @@
                                     {% for cat, null in categories %} 
                                     {% if cat != 'blog' %}
                                         <li {% if cat==category %}class="active" {% endif %}>
-                                            <a href="{{ SITEURL }}/{{cat.url}}">{{ cat }}</a>
+                                            <a href="{{ SITEURL }}/{{cat.url}}">{{ cat | capitalize }}</a>
                                         </li>
                                     {% endif %} 
                                     {% endfor %}

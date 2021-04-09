@@ -9,7 +9,9 @@
         {% include INDEX_INTRODUCTION %}
     {% endif %}
 
-    {## % include 'includes/featuredpost.html' % ##}
+    {% if SHOW_FEATURED_ARTICLE %}
+        {% include 'includes/featuredpost.html' %}
+    {% endif %}
 
     <!-- Two -->
     <section class="wrapper style1 container special">

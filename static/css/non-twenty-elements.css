@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+/* Pagination */
+
+div.pagination {
+    margin-top: 35px;
+}
+
+div.pagination-left {
+    float: left;
+}
+
+div.pagination-middle {
+    text-align: center;
+}
+
+div.pagination-right {
+    float: right;
+}
+
+/* Share Post */
+#post-share-links:not(a) {
+    text-shadow:1px 1px 3px rgba(50,50,50,.15);
+}
+
+#post-share-links a {
+    text-shadow:0 0;
+    margin: 0 0.15em;
+}
+
+#post-share-links {
+    text-align:right;
+    padding-top: 1.25em;
+    font-weight: 900;
+}
+
+#post-share-links .icon.circle {
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border: 0;
+    border-radius: 100%;
+    display: inline-block;
+    font-size: 1.0em;
+    height: 2em;
+    left: 0;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+    width: 2em;
+}
+
+/******************** ICONS FOR SOCIAL ***********************/
+
+/* Social Icons for linkedin and email */
+.icon.circle.fa-linkedin {
+    background: #7490c3;
+    color: white;
+}
+
+    .icon.circle.fa-linkedin:hover {
+        background: #829bc9;
+    }
+
+.icon.circle.fa-envelope {
+    background: #5dc08d;
+    color: white;
+}
+
+    .icon.circle.fa-envelope:hover {
+        background: #4ddb92;
+    }
+
+    .icon.circle.fa-facebook {
+    background: #4267b2;
+    color: white;
+}
+
+    .icon.circle.fa-facebook:hover {
+        background: #7d9ddd;
+    }
+
+.icon.circle.fa-hacker-news {
+    background: #ff4000;
+    color: white;
+}
+
+    .icon.circle.fa-hacker-news:hover {
+        background: #f58662;
+    }
+
+.icon.circle.fa-reddit {
+    background: #ff4500;
+    color: white;
+}
+
+    .icon.circle.fa-reddit:hover {
+        background: #f58662;
+    }
+    
+    ul.feature-icons li {
+    width: 100%;
+    float: right;
+}
+
+/******************** Tag Cloud Styling  ***********************/
+ul.tagcloud {
+    list-style: none;
+    padding: 0;
+}
+
+ul.tagcloud li {
+    display: inline-block;
+}
+
+li.tag-1 {
+    font-size: 150%;
+}
+
+li.tag-2 {
+    font-size: 120%;
+}
+
+li.tag-3 {
+    font-size: 100%;
+}
+
+li.tag-4 {
+    font-size: 80%;
+}
+
+/* Tipue Search Related Formatting to gel with the theme */
+
+button.search-button {
+    min-width: 7em;
+    text-align: center;
+    align-content: center;
+    margin-left: 1em;
+    width: 100%;
+    padding: 0.65em;
+}
+
+.tipue_search_content_title h3 {
+    margin-bottom: 0;
+}
+
+.tipue_search_content_url, .tipue_search_content_debug {
+    font-size: 80%
+}
+
+/** COMMENTS STYLING / CARDS **/
+
+/* Comment wrapper */
+.comment-wrapper {
+    margin-bottom: 0;
+}
+
+/* Comment container
+------------------------- */
+.comment-container {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+    font-weight: 100;
+    margin: 1.0em auto;
+    width: inherit;
+}
+
+.comment-container a {
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+/* Comment Header
+------------------------- */
+.comment-author--no-cover {
+  margin: 0 auto;
+  padding-top: 0.125rem;
+  width: 80%;
+}
+
+.comment-author--no-cover h3::before {
+  content: "\f075";
+  display: inline-block;
+  font-size: 1.5em;
+  height: 1.5em;
+  width: 1.0em;
+  margin-right: 0.35em;
+  margin-top: 0.35em;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900
+}
+
+.comment-author--no-cover h3 {
+    margin-bottom: 0;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+/* Comment body
+------------------------- */
+.comment-body {
+  margin: 0 auto;
+  padding-left: 2.5em;
+  width: 80%;
+}
+
+.comment-title h1 a {
+  color: #333;
+  font-weight: 100;
+}
+
+.comment-text p {
+    margin: 0 0 1em 0;
+}
+
+/* Comment footer
+-------------------------*/
+.comment-footer {
+  margin: 0 auto;
+  padding-bottom: 0.125rem;
+  width: 80%;
+}
+
+.comment-footer ul {
+  margin-top: 0.25rem;
+  margin-bottom: 1.0em;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 0;
+}
+
+.comment-footer li + li {
+    margin-left: 0.5rem;
+}
+  
+  .comment-footer li {
+    color: #999999;
+    font-size: 0.75rem;
+    height: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    white-space: nowrap;
+}
+  
+  .comments {
+    margin-right: 1rem;
+  }
+  
+  .published-date {
+    border: 1px solid #999999;
+    padding: 0 0.5rem;
+  }
+
+/* Mobile screens */
+@media screen and (max-width: 736px) {
+
+    /* Pagination */
+    div.pagination {
+        margin-top: 20px;
+    }
+
+    /* Banner */
+    #banner .inner header h2 {
+        font-size: 1.3em;
+    }
+
+    #banner .inner p {
+        text-align: center;
+        font-size: 0.8em;
+        letter-spacing: 0.08em;
+    }
+
+
+    /* Share this */
+    #post-share-links a{
+        margin: 0 0.1em;
+    }
+
+    p#post-share-links {
+        padding-top: 1.0em;
+    }
+
+    /* Comment container */
+    .comment-container {
+        width: 28rem;
+    }
+}
+
+/*** OTHERS ***/
+.small {
+    font-size: 0.7em;
+    margin-bottom: 0.7em;
+
+}
+
+em {
+    font-style: italic;
+}

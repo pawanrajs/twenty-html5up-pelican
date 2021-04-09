@@ -28,6 +28,38 @@ These might be useful for you to prep your virtual environment to properly insta
     - **pelican-tag-cloud**: to create a tag cloud
 4. Specify the `PLUGINS` in your `pelicanconf.py` as `PLUGINS = ['pelican.plugins.tag_cloud', 'pelican.plugins.share_post', 'pelican.plugins.neighbors']`
 5. Use the supplied `pelicanconf.py` sample to update information. See usage and configuration details below.
+6. Create filters that are used in the theme:
+    - Create a `utils` folder on the same level as your `pelicanconf.py` and create a `filters.py` and `__init__.py` in this folder. 
+    - Add the following functions into `filters.py`
+
+        ```python
+        from datetime import datetime
+
+        # To use sidebar format for archive.html and category.html only`
+        def sidebar(val):
+        if val.startswith('archives') or val.startswith('category'):
+            return 'right-sidebar'
+        elif val == 'index':
+            return 'index'
+        else:
+            return 'no-sidebar'
+
+        # Filter to find difference between two timestamps in days. Used in comments.html
+        def datediff(subtract_date, subtract_from=datetime.now().timestamp()):
+        return round((float(subtract_from) - float(subtract_date))/(60*60*24))
+        ```
+    - Update `pelicanconf.py` to register these jinja2 filters to Pelican
+
+        ```python
+        import sys
+        sys.path.append('.')
+        from utils import filters
+
+        JINJA_FILTERS = {
+        'sidebar': filters.sidebar,
+        'datediff': filters.datediff
+        }
+        ```
 
 
 ## Usage & Configuration
@@ -201,12 +233,12 @@ Here are the steps to follow to setup **moderated comments** (using Heroku), and
 - [Frank Valcarel's site](http://frankvalcarcel.com/) uses an older version of the theme based on `skel.js`
 
 
-## Known Issues
+## Known Issues / To-dos
 
 - A bunch of css is in my `custom.css` which is not yet part of the main theme file. I need to refactor this to make it work.
 - `author.html` is not present, since I created this for my personal site where I did all the writing!
 - There's no DISQUS, FEED, or Analytics support yet. I will eventually get to it. These are either to be done, or to be tested. If someone wants to do it, go ahead and raise a PR, or fork/clone and hack away!
-
+- Convert filters into a plugin for easy install and maintenance.
 
 ## Screenshots
 

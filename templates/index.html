@@ -35,7 +35,7 @@
                         {% if article.summary %}
                             {{article.summary | striptags }}
                         {% else %}
-                            {{article.content[:196] | striptags}}
+                            {{article.content[:150] | striptags}}
                         {% endif %}
                     </p>
                     <footer>

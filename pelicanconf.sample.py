@@ -52,7 +52,7 @@ ARCHIVES_URL = 'archives'
 SEARCH_URL = SITEURL + '/search'
 
 # Plugins
-PLUGINS = ['pelican.plugins.tag_cloud', 'tipue_search', 'pelican.plugins.share_post', 'pelican.plugins.neighbors']
+PLUGINS = ['pelican.plugins.tag_cloud', 'pelican.plugins.tipue_search', 'pelican.plugins.share_post', 'pelican.plugins.neighbors']
 
 # Other Pelican Configuration
 DISPLAY_PAGES_ON_MENU = True

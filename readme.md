@@ -161,7 +161,7 @@ It will also display social media links based on `SOCIAL` variable. `SOCIAL` is 
 This theme has support for the [Tipue Search plugin](https://github.com/getpelican/pelican-plugins/tree/master/tipue_search). This is a jQuery plugin that will search the static site without using any third party service, like DuckDuckGo or Google. 
 
 To enable the plugin:
-1. Enable the plugin (Copy `tipue_search.py` to plugins directory and register it in `pelicanconf.py` `PLUGINS`).
+1. pip install the plugin by using `pip install pelican-tipue-search`. Or you could create a `requirements.txt` with plugins to be installed.
 2. Add `'search'` to the `DIRECT_TEMPLATES` in your `pelicanconf.py`. E.g. `DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')`.
 
 By default, the Tipue search page is configured at "/search.html", but you can override that with the `SEARCH_URL` setting.

@@ -1,4 +1,11 @@
-{% extends "base.html" %} {% block title %}{{ tag|striptags }} | {{ super() }}{% endblock title %} {% block content %}
+{% extends "base.html" %} {% block title %}{{ tag|striptags }} | {{ super() }}{% endblock title %} 
+
+{% block meta %}
+    <meta name="author" content="{{ AUTHOR }}" />
+    <meta name="keywords" content="{{ tag }}" />
+{% endblock meta %}
+
+{% block content %}
 <!-- Main -->
 <article id="main">
 

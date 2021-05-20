@@ -1,4 +1,24 @@
-{% extends "base.html" %} {% block title %}{{ article.title|striptags }} | {{ super() }}{% endblock title %} {% block content %}
+{% extends "base.html" %} 
+{% block title %}{{ article.title|striptags }} | {{ super() }}{% endblock title %} 
+{% block html_lang %}{{ article.lang }}{% endblock %}
+
+{% block meta %}
+    {% if article.author %}
+        <meta name="author" content="{{ article.author }}" />
+    {% else %}
+        <meta name="author" content="{{ AUTHOR }}" />
+    {% endif %}
+
+    {% if article.tags %}
+        <meta name="keywords" content="{{ article.tags|join(',')|striptags }}" />
+    {% endif %}
+
+    {% if article.summary %}
+        <meta name="description" content="{{ article.summary|striptags|escape }}" />
+    {% endif %}
+{% endblock meta %}
+
+{% block content %}
 <!-- Main -->
 <article id="main">
 

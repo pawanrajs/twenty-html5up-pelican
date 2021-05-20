@@ -2,6 +2,9 @@
 <html>
 
 <head>
+
+    {% include 'includes/ga.html' %}
+
     <!-- META -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -130,7 +133,7 @@
     <script src="{{SITEURL}}/{{THEME_STATIC_DIR}}/js/util.js"></script>
     <script src="{{SITEURL}}/{{THEME_STATIC_DIR}}/js/main.js"></script>
 
-    
+
     <!-- add scripts for search here in search.html -->
     {% block scripts %}{% endblock %}
 

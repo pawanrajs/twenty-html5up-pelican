@@ -11,7 +11,13 @@
                         <h3>{{ article.title }}</h3>
                     </a>
                 </header>
-                <p>{{ article.content[:196]|striptags }}</p>
+                <p>
+                    {% if article.summary %}
+                        {{article.summary | striptags }}
+                    {% else %}
+                        {{article.content[:196] | striptags}}
+                    {% endif %}
+                </p>
                 <footer>
                     <ul class="buttons">
                         <li><a href="{{ SITEURL }}/{{ article.url }}" class="button small">Read More</a></li>
